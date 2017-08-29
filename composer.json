@@ -1,5 +1,5 @@
 {
-    "name": "samjbro/SRPGenerator",
+    "name": "samjbro/srp-generator",
     "type": "library",
     "description": "A generator for the Service Repository Pattern",
     "keywords": [

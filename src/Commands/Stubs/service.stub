@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Repos\DummyClass\DummyClassContract as DummyClassRepoInterface;
+
+class DummyClass
+{
+    protected $repo;
+
+    public function __construct(DummyClassRepoInterface $repo)
+    {
+        $this->repo = $repo;
+    }
+
+}

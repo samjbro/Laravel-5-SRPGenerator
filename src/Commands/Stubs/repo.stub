@@ -1,0 +1,19 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Models\DummyClass\MySQL\DummyClass as Model;
+use App\Repos\DummyClass\DummyClassContract;
+
+class DummyClass implements DummyClassContract
+{
+    protected $data;
+
+    protected $dataSource = Model::class;
+
+    public function __construct()
+    {
+        $this->data = new $this->dataSource;
+    }
+
+}

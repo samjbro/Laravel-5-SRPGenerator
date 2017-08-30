@@ -12,18 +12,11 @@ This is where your description should go. Try and limit it to a paragraph or two
 PSRs you support to avoid any confusion with users and contributors.
 
 
-## Install
 
-Via Composer
-
-``` bash
-$ composer require samjbro/Laravel-5-SRPGenerator @dev
-```
-
-## Usage
+## Installation and Usage
 ### Step 1: Install through composer
-``` php
-php artisan make:srp ModelName
+```
+composer require samjbro/srp-generator @dev
 ```
 ###Step 2: Add the Service Provider in `app/Providers/AppServiceProvider.php`
 ``` php
@@ -33,6 +26,10 @@ public function register()
     $this->app->register('samjbro\SRPGenerator\SRPGeneratorServiceProvider');
     }
 }
+```
+
+``` php
+php artisan make:srp ModelName
 ```
 ## Change log
 

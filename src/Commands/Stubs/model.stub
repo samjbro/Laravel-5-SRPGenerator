@@ -3,8 +3,35 @@
 namespace DummyNamespace;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Entities\DummyClass as Entity;
+
 
 class DummyClass extends Model
 {
-    //
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
+    }
+
+    public function buildEntity()
+    {
+        $data = [
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'updated_at' => $this->getUpdatedAt()
+        ];
+
+        return new Entity($data);
+    }
 }
